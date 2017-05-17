@@ -53,19 +53,18 @@ public class MainActivity extends AppCompatActivity {
         mRecycler = (RecyclerView)findViewById(R.id.main_recycler_view);
         retreiveDishes();
         myDBRef = FirebaseDatabase.getInstance().getReference("dishesPresses");
-        dishesPressed = new HashMap<String, Object>();
+        dishesPressed = new HashMap<>();
         myDBRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 GenericTypeIndicator<HashMap<String,Object>> t =
                         new GenericTypeIndicator<HashMap<String,Object>>() {};
                 dishesPressed = dataSnapshot.getValue(t);
-                Log.d(TAG, "data received: "+dishesPressed);
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Log.d(TAG, "onCancelled: "+ databaseError.toException());
+                Log.d(TAG, "onCancelled: "+ databaseError.getDetails());
             }
         });
     }
@@ -79,9 +78,8 @@ public class MainActivity extends AppCompatActivity {
                 (ConnectivityManager)this.getSystemService(Context.CONNECTIVITY_SERVICE);
 
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-        boolean isConnected = activeNetwork != null &&
+        return activeNetwork != null &&
                 activeNetwork.isConnectedOrConnecting();
-        return isConnected;
     }
 
     /**
@@ -153,7 +151,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             String dishID = mDishesList.get(mRecycler.getChildLayoutPosition(v)).getDishID();
-            Log.d(TAG, "onClick: "+mDishesList.get(mRecycler.getChildLayoutPosition(v)).getImgLink());
             int count = 0;
             if (dishesPressed.containsKey(dishID))
                 count = Integer.parseInt(dishesPressed.get(dishID).toString());

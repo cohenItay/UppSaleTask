@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "810107357284",
+    "firebase_url": "https://uppsaletask.firebaseio.com",
+    "project_id": "uppsaletask",
+    "storage_bucket": "uppsaletask.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810107357284:android:5a1d50d630cc69c4",
+        "android_client_info": {
+          "package_name": "com.itayc14.uppsaletask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "810107357284-m5ndrub1iq82g34gk38cfknpj8pjm9pa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.itayc14.uppsaletask",
+            "certificate_hash": "35827958a2d47055cfc3804396e5cc8e775a0171"
+          }
+        },
+        {
+          "client_id": "810107357284-der0n2seb5ls9f4vdns9qtvshkdntfbi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEy5s7d03zlwF9mM93iOpc0nIcd6tQy0k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "810107357284-der0n2seb5ls9f4vdns9qtvshkdntfbi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

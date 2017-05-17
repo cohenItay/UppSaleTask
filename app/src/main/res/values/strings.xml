@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">UppSaleTask</string>
+    <string name="no_internet_content">אתה לא מחובר לאינטרנט. האם תרצה להתחבר?</string>
+    <string name="no_internet_title">אין אינטרנט</string>
+    <string name="approve">כן</string>
+    <string name="disapprove">לא</string>
+    <string name="exitApp">צא מהאפליקציה</string>
+    <string name="loading_Data">טוען תפריט..</string>
+    <string name="dishName">מנה :</string>
+    <string name="dish_description">תיאור:</string>
+    <string name="serv_con_fail">קיימת בעייה בהתחברות לשרת</string>
+</resources>
